@@ -1,8 +1,6 @@
 package com.example.music.controllers;
 
-import com.example.music.models.Artist;
 import com.example.music.models.Song;
-import com.example.music.services.ArtistService;
 import com.example.music.services.SongService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

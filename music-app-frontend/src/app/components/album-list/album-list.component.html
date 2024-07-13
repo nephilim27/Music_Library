@@ -1,0 +1,14 @@
+<div *ngIf="albums && albums.length > 0" class="albums-container">
+  <h2>Albums</h2>
+  <ul class="album-list">
+    <li *ngFor="let album of albums" class="album-item">
+      <h3>{{ album.title }}</h3>
+      <p>{{ album.description }}</p>
+      <!-- Display other album details as needed -->
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="albums && albums.length === 0" class="albums-container">
+  <p>No albums found.</p>
+</div>

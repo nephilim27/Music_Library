@@ -13,17 +13,26 @@ public class Album {
     @Column(name = "album_id")
     private Long albumId;
 
-    @Column(length = 500)
+    @Column(name = "title", length = 500)
     private String title;
 
-    @Column(length = 1000)
+    @Column(name = "description", length = 1000)
     private String description;
 
-    @Column
+    @Column(name = "artist_id")
     private Long artistId;
 
-    @OneToMany(mappedBy = "albumId", cascade = CascadeType.ALL,  fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "albumId", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Song> songs = new ArrayList<>();
+
+    public Album() {
+    }
+
+    public Album(String title, String description, Long artistId) {
+        this.title = title;
+        this.description = description;
+        this.artistId = artistId;
+    }
 
     public Long getAlbumId() {
         return albumId;
@@ -48,7 +57,6 @@ public class Album {
     public void setDescription(String description) {
         this.description = description;
     }
-
 
     public Long getArtistId() {
         return artistId;

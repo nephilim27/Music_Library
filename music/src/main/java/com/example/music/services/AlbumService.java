@@ -31,5 +31,7 @@ public class AlbumService {
         return albumRepository.existsByTitle(title);
     }
 
-
+    public List<Album> getAlbumsByArtistId(Long artistId) {
+        return albumRepository.findByArtistId(artistId);
+    }
 }

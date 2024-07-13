@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Artist} from "../models/artist";
+import {Album} from "../models/album";
 
 @Injectable({
   providedIn: 'root'
@@ -14,4 +15,6 @@ export class ArtistService {
   getArtists(): Observable<Artist[]> {
     return this.http.get<Artist[]>(this.apiUrl);
   }
+
+
 }
