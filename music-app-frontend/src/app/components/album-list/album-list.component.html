@@ -1,24 +1,9 @@
-<!--<div *ngIf="albums && albums.length > 0" class="albums-container">-->
-<!--  <h2>Albums</h2>-->
-<!--  <ul class="album-list">-->
-<!--    <li *ngFor="let album of albums" class="album-item">-->
-<!--      <h3>{{ album.title }}</h3>-->
-<!--      <p>{{ album.description }}</p>-->
-<!--      &lt;!&ndash; Display other album details as needed &ndash;&gt;-->
-<!--    </li>-->
-<!--  </ul>-->
-<!--</div>-->
-
-<!--<div *ngIf="albums && albums.length === 0" class="albums-container">-->
-<!--  <p>No albums found.</p>-->
-<!--</div>-->
-<!-- album-list.component.html -->
-
 <div *ngIf="albums && albums.length > 0" class="albums-container">
   <h2>Albums</h2>
+  <h4 class="hint">Click on an album to see their songs</h4>
   <ul class="album-list">
     <li *ngFor="let album of albums" class="album-item">
-      <h3 (click)="onSelectAlbum(album)">{{ album.title }}</h3>
+      <h3 (click)="onSelectAlbum(album)">💿{{ album.title }}</h3>
       <p>{{ album.description }}</p>
     </li>
   </ul>

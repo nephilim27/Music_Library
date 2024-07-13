@@ -41,3 +41,8 @@
 .album-item p {
   margin: 10px 0 0;
 }
+
+.hint {
+  font-style: italic;
+  color: mediumpurple;
+}

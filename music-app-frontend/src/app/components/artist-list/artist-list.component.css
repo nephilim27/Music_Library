@@ -48,4 +48,8 @@
   text-align: left;
 }
 
+.hint {
+  font-style: italic;
+  color: mediumpurple;
+}
 

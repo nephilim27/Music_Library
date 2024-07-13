@@ -1,5 +1,6 @@
 <div *ngIf="artists && artists.length > 0" class="artist-container">
   <h2>Artists</h2>
+  <h4 class="hint">Click on an artist to see their albums</h4>
   <ul class="artist-list">
     <li *ngFor="let artist of artists" class="artist-item">
       <span class="artist-name" (click)="onSelectArtist(artist)">🎤{{ artist.name }}</span>
