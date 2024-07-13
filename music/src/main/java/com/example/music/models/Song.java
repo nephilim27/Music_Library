@@ -15,10 +15,6 @@ public class Song {
     @Column
     private String length;
 
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "albumId", referencedColumnName = "album_id")
-//    private Album album;
-
     @Column
     private Long albumId;
 
@@ -46,13 +42,6 @@ public class Song {
         this.length = length;
     }
 
-//    public Album getAlbum() {
-//        return album;
-//    }
-//
-//    public void setAlbum(Album album) {
-//        this.album = album;
-//    }
 
 
     public Long getAlbumId() {

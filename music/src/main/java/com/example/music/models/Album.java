@@ -19,10 +19,6 @@ public class Album {
     @Column(length = 1000)
     private String description;
 
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "artistId", referencedColumnName = "artist_id")
-//    private Artist artist;
-
     @Column
     private Long artistId;
 
@@ -52,14 +48,6 @@ public class Album {
     public void setDescription(String description) {
         this.description = description;
     }
-
-//    public Artist getArtist() {
-//        return artist;
-//    }
-//
-//    public void setArtist(Artist artist) {
-//        this.artist = artist;
-//    }
 
 
     public Long getArtistId() {

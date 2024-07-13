@@ -1,0 +1,11 @@
+<div *ngIf="artists" class="artist-container">
+  <h2>Artists</h2>
+  <ul class="artist-list">
+    <li *ngFor="let artist of artists" class="artist-item">
+      <span class="artist-icon">🎤</span>
+      <span class="artist-name">{{ artist.name }}</span>
+    </li>
+  </ul>
+</div>
+
+
