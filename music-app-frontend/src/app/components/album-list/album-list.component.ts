@@ -16,7 +16,9 @@ export class AlbumListComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private albumService: AlbumService
+    private albumService: AlbumService,
+
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -31,5 +33,9 @@ export class AlbumListComponent implements OnInit {
       .subscribe((albums: Album[]) => {
         this.albums = albums;
       });
+  }
+
+  onSelectAlbum(album: Album): void {
+    this.router.navigate(['/songs', album.albumId]);
   }
 }

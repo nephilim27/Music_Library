@@ -29,4 +29,8 @@ public class SongService {
     public boolean existsByTitle(String title) {
         return songRepository.existsByTitle(title);
     }
+
+    public List<Song> getSongsByAlbumId (Long albumId){
+        return songRepository.getSongsByAlbumId(albumId);
+    }
 }
