@@ -14,4 +14,8 @@ export class SongService {
     const url = `${this.apiUrl}/songs/${albumId}`;
     return this.http.get<Song[]>(url);
   }
+
+  searchSongs(query: string): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/search?query=${query}`);
+  }
 }

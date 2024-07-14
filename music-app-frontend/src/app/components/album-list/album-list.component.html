@@ -1,9 +1,9 @@
 <div *ngIf="albums && albums.length > 0" class="albums-container">
   <h2>Albums</h2>
-  <h4 class="hint">Click on an album to see their songs</h4>
+  <h5 class="hint">Click on an album to see their songs</h5>
   <ul class="album-list">
     <li *ngFor="let album of albums" class="album-item">
-      <h3 (click)="onSelectAlbum(album)">💿{{ album.title }}</h3>
+      <h4 (click)="onSelectAlbum(album)">💿{{ album.title }}</h4>
       <p>{{ album.description }}</p>
     </li>
   </ul>

@@ -1,10 +1,17 @@
 <div *ngIf="songs && songs.length > 0" class="songs-container">
   <h2>Songs</h2>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput [formControl]="searchControl" placeholder="Search song" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let song of filteredSongs | async" [value]="song.title">
+        {{ song.title }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
   <ul class="song-list">
-    <li *ngFor="let song of songs" class="song-item">
-      <h3>🎵{{ song.title }}</h3>
+    <li *ngFor="let song of filteredSongs | async" class="song-item">
+      <h4>🎵{{ song.title }}</h4>
       <p>{{ song.length }}</p>
-      <!-- Display other song details as needed -->
     </li>
   </ul>
 </div>
@@ -12,4 +19,5 @@
 <div *ngIf="songs && songs.length === 0" class="songs-container">
   <p>No songs found.</p>
 </div>
+
 

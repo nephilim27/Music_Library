@@ -9,16 +9,17 @@
 .songs-container h2 {
   color: #333;
   font-size: 24px;
+  font-weight: bold;
   border-bottom: 2px solid #007bff;
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
 
 .songs-list {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
+  margin: 0;
 }
-
 .song-item {
   background-color: #fff;
   margin: 10px 0;
@@ -40,4 +41,9 @@
 
 .song-item p {
   margin: 10px 0 0;
+}
+
+.example-full-width {
+  width: 100%;
+  margin-bottom: 20px;
 }
